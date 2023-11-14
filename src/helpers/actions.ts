@@ -1,7 +1,6 @@
 import { ILocator, LinkRoleType } from './dataTypes';
 import { ElementUtils } from './elementUtils';
 import { Locator, Page } from '@playwright/test';
-// import {Waiters} from './waiters';
 
 export class Actions {
   private page: Page;

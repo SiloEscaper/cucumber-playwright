@@ -16,6 +16,6 @@ Feature: SAP Fioneer Challenge
   @GetInTouch
   Scenario: Get In Touch
     When the user clicks on 'Get in touch' button
-    Then the user is on Get in toch page
+    Then the user is on Get in touch page
     When the user clicks on 'Submit' button on empty contact
     Then validation messages are displayed correctly on the page

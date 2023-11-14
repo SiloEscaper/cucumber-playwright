@@ -4,9 +4,7 @@ import { headerBookmarks } from '../testData/headerData';
 import { Then, When } from '@cucumber/cucumber';
 import { Page } from '@playwright/test';
 
-Then(
-  /^the bookmarks are visible and have following content on the page$/,
-  async function (this: ICustomWorld) {
+Then(/^the bookmarks are visible and have following content on the page$/, async function (this: ICustomWorld) {
     const page: Page = this.page!;
     const basePage: BasePagePo = new BasePagePo(page);
 
@@ -14,9 +12,7 @@ Then(
   },
 );
 
-When(
-  /^the user selects (.*) inside (.*) bookmark$/,
-  async function (this: ICustomWorld, dropdownOption: string, bookmark: string) {
+When(/^the user selects (.*) inside (.*) bookmark$/, async function (this: ICustomWorld, dropdownOption: string, bookmark: string) {
     const page: Page = this.page!;
     const basePage: BasePagePo = new BasePagePo(page);
 

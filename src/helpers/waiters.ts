@@ -14,7 +14,6 @@ export class Waiters {
     locatorIndex: number = 0,
     timeout: number = this.timeout,
   ): Promise<void> {
-    // const pageElement: Locator = await this.elementUtils.getElementByLocator(locator, '', locatorIndex);
     const pageElement: Locator = await this.page.locator(locator.selector).nth(locatorIndex);
 
     await expect(

@@ -14,9 +14,7 @@ When(/^the user clicks on 'Submit' button on empty contact$/, async function (th
   );
 });
 
-Then(
-  /^validation messages are displayed correctly on the page$/,
-  async function (this: ICustomWorld) {
+Then(/^validation messages are displayed correctly on the page$/, async function (this: ICustomWorld) {
     const page: Page = this.page!;
     const getInTouchPo: GetInTouchPo = new GetInTouchPo(page);
 

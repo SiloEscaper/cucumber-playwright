@@ -1,15 +1,11 @@
 import { ILocator } from './dataTypes';
-// import { Waiters } from './waiters';
 import { expect, Locator, Page } from '@playwright/test';
-// import { StringUtils } from './stringUtils';
 
 export class ElementUtils {
-  // private waiters: Waiters;
   private page: Page;
 
   constructor(page: Page) {
     this.page = page;
-    // this.waiters = new Waiters(page);
   }
 
   public async getElementByLocator(
@@ -71,8 +67,6 @@ export class ElementUtils {
 
   public async getTextListByLocator(locator: ILocator, frameLocator?: string): Promise<string[]> {
     try {
-      // await this.waiters.waitForElementVisible(locator, 0, 50000);
-
       return frameLocator
         ? await this.page.frameLocator(frameLocator).locator(locator.selector).allInnerTexts()
         : await this.page.locator(locator.selector).allInnerTexts();

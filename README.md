@@ -6,6 +6,9 @@ For writing E2E tests based on Cucumber with Playwright(TS).
 I think that Cucumber's usage can be useful when other team players aren't able to get through all of framework's context.
 Gherkin syntax is much more readable than TDD concept.
 
+## Tests location
+Tests(cucumber features) are located 'features'
+
 ## To run the tests
 `npm run test` or `npx cucumber-js` runs all tests
 `npm run test <feature name>` or `npx cucumber-js <feature name>` run the single feature
