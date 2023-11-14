@@ -4,7 +4,7 @@ For writing E2E tests based on Cucumber with Playwright(TS).
 Reporting - Cucumber(multiple-cucumber-html-reporter)
 
 # Why cucumber?
-I think that Cucumber's usage can be useful when other team players aren't able to get through all of framework's context.
+I think that Cucumber's usage can be useful when other team players aren't able to get through all of the framework's context.
 Gherkin syntax is much more readable than TDD concept.
 
 ## Tests location
