@@ -9,7 +9,6 @@ import {
   webkit,
   WebKitBrowser,
   ConsoleMessage,
-  request,
 } from '@playwright/test';
 import { ITestCaseHookParameter } from '@cucumber/cucumber/lib/support_code_library_builder/types';
 import { ensureDir } from 'fs-extra';
@@ -50,15 +49,10 @@ Before({ tags: '@debug' }, async function (this: ICustomWorld) {
 Before(async function (this: ICustomWorld, { pickle }: ITestCaseHookParameter) {
   this.startTime = new Date();
   this.testName = pickle.name.replace(/\W/g, '-');
-  // customize the [browser context](https://playwright.dev/docs/next/api/class-browser#browsernewcontextoptions)
   this.context = await browser.newContext({
     acceptDownloads: true,
     recordVideo: process.env.PWVIDEO ? { dir: 'screenshots' } : undefined,
     viewport: { width: 1200, height: 800 },
-  });
-  this.server = await request.newContext({
-    // All requests we send go to this API endpoint.
-    baseURL: config.BASE_API_URL,
   });
 
   await this.context.tracing.start({ screenshots: true, snapshots: true });
